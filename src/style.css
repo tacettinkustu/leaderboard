@@ -6,7 +6,6 @@ html {
 }
 
 body {
-  background-color: bisque;
   width: 60%;
 }
 
@@ -15,10 +14,10 @@ main {
   flex-direction: row;
 }
 
-.left-section{
+.left-section {
   width: 50%;
 }
 
-.right-section{
+.right-section {
   width: 50%;
 }
