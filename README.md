@@ -1,4 +1,4 @@
-# Webpack-Template
+# Microverse-Leaderboard
 
 * It has been prepared to be used as a template in the projects to be built within the scope of Microverse Course. The required tools have been added to the template.
 
@@ -10,6 +10,10 @@
 ## Built With
 
 * Javascript
+
+## Live Demo
+
+[Live Demo Link](https://zealous-bell-536388.netlify.app/)
 
 ## Prerequisites
 
