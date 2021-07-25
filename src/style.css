@@ -46,6 +46,7 @@ main {
   text-align: center;
   font-size: 0.75rem;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .score-list {
@@ -61,7 +62,7 @@ main {
   height: 2rem;
   padding: 0 1rem;
   padding-top: 0.6rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .item:nth-of-type(even) {
@@ -84,6 +85,14 @@ input {
   padding: 0.25rem 0.5rem;
 }
 
+input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #555;
+  padding: 5px;
+}
+
 #submit-btn {
   font-family: 'Roboto', sans-serif;
   align-self: flex-end;
@@ -95,4 +104,5 @@ input {
   text-align: center;
   font-size: 0.75rem;
   cursor: pointer;
+  border-radius: 3px;
 }
