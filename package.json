@@ -1,7 +1,8 @@
 {
-    "name": "webpack-template",
+    "name": "microverse-leaderboard",
     "version": "1.0.0",
     "description": "",
+    "homepage": "https://github.com/tacettinkustu/microverse-leaderboard/",
     "private": true,
     "scripts": {
         "test": "jest",
@@ -11,19 +12,20 @@
         "webhint": "hint .",
         "stylelint": "stylelint \"**/*.{css,scss}\"",
         "eslint": "eslint .",
-        "lint": "npm run webhint && npm run stylelint && npm run eslint"
+        "lint": "npm run webhint && npm run stylelint && npm run eslint",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tacettinkustu/webpack-template.git"
+        "url": "git+https://github.com/tacettinkustu/microverse-leaderboard.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/tacettinkustu/webpack-template/issues"
+        "url": "https://github.com/tacettinkustu/microverse-leaderboard/issues"
     },
-    "homepage": "https://github.com/tacettinkustu/webpack-template#readme",
     "devDependencies": {
         "@babel/core": "^7.14.8",
         "@babel/preset-env": "^7.14.8",
@@ -33,6 +35,7 @@
         "eslint": "^7.30.0",
         "eslint-config-airbnb-base": "^14.2.1",
         "eslint-plugin-import": "^2.23.4",
+        "gh-pages": "^3.2.3",
         "hint": "^6.1.4",
         "html-webpack-plugin": "^5.3.2",
         "jest": "^27.0.6",
