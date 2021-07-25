@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  width: 50%;
+  width: 60%;
 }
 
 h1 {
@@ -39,6 +39,25 @@ main {
   text-align: center;
   font-size: 0.75rem;
   cursor: pointer;
+}
+
+.score-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 2px solid #555;
+  border-radius: 5px;
+}
+
+.item {
+  height: 2rem;
+  padding: 0 1rem;
+  padding-top: 0.6rem;
+}
+
+.item:nth-of-type(even) {
+  background: rgba(209, 202, 202, 0.63);
 }
 
 .right-section {
