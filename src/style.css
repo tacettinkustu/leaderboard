@@ -7,6 +7,7 @@ html {
 
 body {
   width: 60%;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -35,6 +36,7 @@ main {
 }
 
 .button {
+  font-family: 'Roboto', sans-serif;
   align-self: center;
   background-color: #555;
   height: 2rem;
@@ -59,6 +61,7 @@ main {
   height: 2rem;
   padding: 0 1rem;
   padding-top: 0.6rem;
+  font-weight: 600;
 }
 
 .item:nth-of-type(even) {
@@ -78,9 +81,11 @@ form {
 
 input {
   margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
 }
 
 #submit-btn {
+  font-family: 'Roboto', sans-serif;
   align-self: flex-end;
   background-color: #555;
   height: 2rem;
