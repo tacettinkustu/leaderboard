@@ -4,15 +4,22 @@ import './style.css';
 const addForm = document.querySelector('form');
 // const nameInput = document.querySelector('#name');
 // const scoreInput = document.querySelector('score');
-// const refresh = document.querySelector('button');
+const refresh = document.querySelector('button');
 const leaderboard = new Leaderboard();
 
+let gameId;
 function startGame() {
   leaderboard
-    .startGame('futbol')
+    .startGame('Term Project')
     .then((response) => response.result.split(' '))
-    .then((res) => console.log(res[3]))
+    .then((res) => {
+      [gameId] = [res[3]];
+    })
     .catch((err) => console.err(err));
+}
+
+function getScores() {
+  leaderboard.getScores(gameId).then((response) => console.log(response));
 }
 
 function postScore() {
@@ -21,3 +28,4 @@ function postScore() {
 
 document.addEventListener('DOMContentLoaded', startGame);
 addForm.addEventListener('submit', postScore);
+refresh.addEventListener('click', getScores);
