@@ -23,6 +23,22 @@ class Leaderboard {
     const responseData = await responseStart.json();
     return responseData;
   }
+
+  async postScore(gameId, name, score) {
+    const responseStart = await fetch(`${this.url}${gameId}/scores/`, {
+      method: 'POST',
+      body: JSON.stringify({
+        user: name,
+        score,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+
+    const responseData = await responseStart.json();
+    return responseData;
+  }
 }
 
 export default Leaderboard;

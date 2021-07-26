@@ -2,8 +2,8 @@ import Leaderboard from './js/leaderboard.js';
 import './style.css';
 
 const addForm = document.querySelector('form');
-// const nameInput = document.querySelector('#name');
-// const scoreInput = document.querySelector('score');
+const nameInput = document.querySelector('#name');
+const scoreInput = document.querySelector('#score');
 const refresh = document.querySelector('button');
 const leaderboard = new Leaderboard();
 
@@ -19,11 +19,14 @@ function startGame() {
 }
 
 function getScores() {
-  leaderboard.getScores(gameId).then((response) => console.log(response));
+  leaderboard.getScores(gameId).then((response) => console.log(response.result));
 }
 
-function postScore() {
-  // post scores to API
+function postScore(e) {
+  leaderboard
+    .postScore(gameId, nameInput.value, scoreInput.value)
+    .then((response) => console.log(response));
+  e.preventDefault();
 }
 
 document.addEventListener('DOMContentLoaded', startGame);
