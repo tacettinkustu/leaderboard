@@ -10,35 +10,35 @@ const list = document.querySelector('.score-list');
 const leaderboard = new Leaderboard();
 
 let gameId;
-function startGame() {
+const startGame = () => {
   leaderboard
     .startGame('Term Project')
     .then((response) => response.result.split(' '))
     .then((res) => {
       [gameId] = [res[3]];
     });
-}
+};
 
-function addToUI(arr) {
+const addToUI = (arr) => {
   list.innerHTML = '';
   arr.forEach((el) => {
     list.innerHTML += `
     <li class="item">${el.user} : ${el.score}</li>
     `;
   });
-}
+};
 
-function getScores() {
+const getScores = () => {
   leaderboard.getScores(gameId).then((response) => addToUI(response.result));
-}
+};
 
-function postScore(e) {
+const postScore = (e) => {
   leaderboard.postScore(gameId, nameInput.value, scoreInput.value);
 
   nameInput.value = '';
   scoreInput.value = '';
   e.preventDefault();
-}
+};
 
 document.addEventListener('DOMContentLoaded', startGame);
 addForm.addEventListener('submit', postScore);
