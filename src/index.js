@@ -5,6 +5,8 @@ const addForm = document.querySelector('form');
 const nameInput = document.querySelector('#name');
 const scoreInput = document.querySelector('#score');
 const refresh = document.querySelector('button');
+const list = document.querySelector('.score-list');
+
 const leaderboard = new Leaderboard();
 
 let gameId;
@@ -18,14 +20,24 @@ function startGame() {
     .catch((err) => console.err(err));
 }
 
+function addToUI(arr) {
+  list.innerHTML = '';
+  arr.forEach((el) => {
+    list.innerHTML += `
+    <li class="item">${el.user} : ${el.score}</li>
+    `;
+  });
+}
+
 function getScores() {
-  leaderboard.getScores(gameId).then((response) => console.log(response.result));
+  leaderboard.getScores(gameId).then((response) => addToUI(response.result));
 }
 
 function postScore(e) {
   leaderboard
     .postScore(gameId, nameInput.value, scoreInput.value)
-    .then((response) => console.log(response));
+    .catch((err) => console.err(err));
+  [nameInput.value, scoreInput.value] = ['', ''];
   e.preventDefault();
 }
 
