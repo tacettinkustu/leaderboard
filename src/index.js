@@ -16,8 +16,7 @@ function startGame() {
     .then((response) => response.result.split(' '))
     .then((res) => {
       [gameId] = [res[3]];
-    })
-    .catch((err) => console.err(err));
+    });
 }
 
 function addToUI(arr) {
@@ -34,10 +33,10 @@ function getScores() {
 }
 
 function postScore(e) {
-  leaderboard
-    .postScore(gameId, nameInput.value, scoreInput.value)
-    .catch((err) => console.err(err));
-  [nameInput.value, scoreInput.value] = ['', ''];
+  leaderboard.postScore(gameId, nameInput.value, scoreInput.value);
+
+  nameInput.value = '';
+  scoreInput.value = '';
   e.preventDefault();
 }
 

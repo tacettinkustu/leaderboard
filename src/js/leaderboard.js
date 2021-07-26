@@ -25,6 +25,9 @@ class Leaderboard {
   }
 
   async postScore(gameId, name, score) {
+    if (name === '' || score === '') {
+      alert('Please provide all information');
+    }
     const responseStart = await fetch(`${this.url}${gameId}/scores/`, {
       method: 'POST',
       body: JSON.stringify({
