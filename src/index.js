@@ -26,9 +26,8 @@ const getScores = () => {
 
 const postScore = (e) => {
   leaderboard.postScore(gameId, nameInput.value, scoreInput.value);
+  ui.cleanInputs();
 
-  nameInput.value = '';
-  scoreInput.value = '';
   e.preventDefault();
 };
 

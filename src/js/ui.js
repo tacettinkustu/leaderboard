@@ -1,6 +1,8 @@
 class UI {
   constructor() {
     this.list = document.querySelector('.score-list');
+    this.nameInput = document.querySelector('#name');
+    this.scoreInput = document.querySelector('#score');
   }
 
   addToUI(arr) {
@@ -10,6 +12,11 @@ class UI {
           <li class="item">${el.user} : ${el.score}</li>
           `;
     });
+  }
+
+  cleanInputs() {
+    this.nameInput.value = '';
+    this.scoreInput.value = '';
   }
 }
 
