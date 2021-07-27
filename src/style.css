@@ -3,11 +3,18 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("https://wallpapercave.com/wp/wp2729921.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
   width: 60%;
+  height: 91vh;
   font-family: 'Roboto', sans-serif;
+  color: rgb(71, 71, 71);
+  background-color: whitesmoke;
+  border-radius: 10px;
 }
 
 h1 {
@@ -38,7 +45,7 @@ main {
 .button {
   font-family: 'Roboto', sans-serif;
   align-self: center;
-  background-color: #555;
+  background-color: rgb(71, 71, 71);
   height: 2rem;
   border: none;
   color: white;
@@ -66,7 +73,7 @@ main {
 }
 
 .item:nth-of-type(even) {
-  background: rgba(209, 202, 202, 0.63);
+  background: rgba(182, 182, 182, 0.603);
 }
 
 .right-section {
@@ -89,14 +96,14 @@ input::placeholder {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
-  color: #555;
+  color: rgb(71, 71, 71);
   padding: 5px;
 }
 
 #submit-btn {
   font-family: 'Roboto', sans-serif;
   align-self: flex-end;
-  background-color: #555;
+  background-color: rgb(71, 71, 71);
   height: 2rem;
   border: none;
   color: white;
@@ -112,7 +119,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #555;
-  color: white;
+  background-color: whitesmoke;
+  color: rgb(71, 71, 71);
+  font-weight: 500;
   text-align: center;
 }
