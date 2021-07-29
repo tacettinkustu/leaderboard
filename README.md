@@ -12,6 +12,11 @@
 
 * It is built as a part of Microverse Web Developer Course. ES6 and Webpack template was used in this project.
 
+
+## Live Demo
+
+[Live Demo Link](https://zealous-bell-536388.netlify.app/)
+
 ## Projects List
 
 * I will be building the leaderboard website during the whole week. Here is the list of projects that will guide me through the steps described above. I will find details about each of the milestone requirements in the upcoming program activities.
@@ -25,10 +30,6 @@ Project 3: final touches.
 * HTML
 * CSS
 * Javascript
-
-## Live Demo
-
-[Live Demo Link](https://zealous-bell-536388.netlify.app/)
 
 ## Prerequisites
 
